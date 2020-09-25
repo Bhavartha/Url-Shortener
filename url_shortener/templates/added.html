@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="font-weight-light">Link Created Successfully</h1>
+                <h3 class="font-weight-light">
+                    <a href="{{url_for('redirect_user',url=link.short_link)}}">
+                        {{url_for('home',_external=True)}}{{ link.short_link }}</a>
+                </h3>
+                <div class="mt-5"></div>
+                <p>Full Link: {{ link.full_link }}</p>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock content %}
